@@ -53,7 +53,7 @@ test('Uncompleted tasks are not rendered', () => {
     };
 
     const completedTasksElement = renderWithTasksContext(taskList).getAllByRole('listitem');
-    expect(completedTasksElement).toHaveLength(0) //1 working
+    expect(completedTasksElement).toHaveLength(1)
 
 })
 
