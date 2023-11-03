@@ -1,4 +1,4 @@
-name: Run React Tests
+name: Run React Tests and Deploy
 
 on:
   push:
@@ -24,9 +24,12 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Check for test failures
-        run: |
-          if [ $? -ne 0 ]; then
-            echo "Tests failed. Blocking push."
-            exit 1
-          fi
+      - name: Build React app
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        if: ${{ job.status == 'success' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build # Assurez-vous que le chemin de ce dossier est correct
