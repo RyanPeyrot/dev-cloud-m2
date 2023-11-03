@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render components snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h2>
+      Tâches terminées
+    </h2>
+    <ul>
+      <li>
+        Task 3
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
