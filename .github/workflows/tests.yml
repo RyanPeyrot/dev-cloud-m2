@@ -31,5 +31,5 @@ jobs:
         with:
           branch: gh-pages # Spécifie la branche sur laquelle le site construit sera déployé.
           folder: build # Le répertoire contenant les résultats de la construction à déployer.
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
